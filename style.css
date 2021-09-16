@@ -667,7 +667,7 @@ img{
     .nav__menu{
         background-color: unset;
         height: var(--header-height);
-        position: absolute;
+        position: fixed;
         top: -8px;
         left: 170px;
     }
@@ -675,6 +675,8 @@ img{
         display: flex;
         /* align-items: center;
         justify-content: center; */
+        align-items: center;
+        justify-content: space-evenly;
     }
     .nav__item{
         margin-left: auto;
