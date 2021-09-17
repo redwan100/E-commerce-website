@@ -667,7 +667,7 @@ img{
     .nav__menu{
         background-color: unset;
         height: var(--header-height);
-        position: fixed;
+        /* position: fixed; */
         top: -8px;
         left: 170px;
     }
