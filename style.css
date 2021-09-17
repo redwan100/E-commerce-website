@@ -196,7 +196,7 @@ img{
     margin-bottom: var(--mb-4);
 }
 
-.nav__menu{
+/* .nav__menu{
     position: fixed;
     top: var(--header-height);
     left: -100%;
@@ -205,7 +205,7 @@ img{
     padding: 2rem;
     background-color: var(--white-color);
     transition: .5s;
-}
+} */
 .nav__logo{
     font-weight: var(--font-semi-bold);
 }
