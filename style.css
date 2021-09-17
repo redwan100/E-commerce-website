@@ -158,7 +158,6 @@ img{
         position: fixed;
         top: var(--header-height);
         left: -100%;
-        left: 0;
         width: 70%;
         height: 100vh;
         padding: 2rem;
@@ -193,23 +192,30 @@ img{
 }
 
 .nav__item{
-    margin-bottom: var(--mb-4);
+    margin: 0 2rem 0 0;
 }
 
-/* .nav__menu{
-    position: fixed;
+
+.nav__menu{
+    /* position: fixed;
     top: var(--header-height);
     left: -100%;
     width: 70%;
     height: 100vh;
     padding: 2rem;
     background-color: var(--white-color);
-    transition: .5s;
-} */
+    transition: .5s; */
+}
+
+.nav__list{
+    display: flex;
+}
+
+
 .nav__logo{
     font-weight: var(--font-semi-bold);
 }
-.nav__shop{
+.nav__shop, .nav__toggle{
     font-size: 1.3rem;
     cursor: pointer;
 }
@@ -247,7 +253,7 @@ img{
 
 .scroll__header{
     background-color: var(--white-color);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -267,6 +273,7 @@ img{
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 /* ============== Shape ================= */
@@ -276,6 +283,7 @@ img{
     height: 220px;
     border-radius: 50%;
     background-color: var(--dark-color);
+  
 }
 .home__img{
     position: absolute;
@@ -283,7 +291,7 @@ img{
     width: 270px;
     max-width: initial;
     transform: var(--rotate-img)
-
+    
 }
 .home__new{
     display: block;
@@ -341,7 +349,7 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem;
+    padding: 1rem;
     background-color: var(--dark-color-lighten);
     border-radius: .5rem;
     transition: .3s;
@@ -664,6 +672,7 @@ img{
     .nav{
         height: calc(var(--header-height)  + 1.5rem);
     }
+
     .nav__menu{
         background-color: unset;
         height: var(--header-height);
@@ -676,8 +685,9 @@ img{
         /* align-items: center;
         justify-content: center; */
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
+
     .nav__item{
         margin-left: auto;
     }
