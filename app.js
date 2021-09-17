@@ -52,7 +52,6 @@ window.addEventListener('scroll', () => {
     const nav = document.getElementById('header');
     if (this.scrollY >= 650) {
         nav.classList.add('scroll__header');
-        this.style.transition = '.3s'
     } else {
         nav.classList.remove('scroll__header');
     }

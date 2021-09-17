@@ -151,8 +151,9 @@ img{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 };
-
+ 
  @media screen and (max-width: 768px) {
     .nav__menu{
         position: fixed;
@@ -164,7 +165,7 @@ img{
         background-color: var(--white-color);
         transition: .5s;
     }
-
+  
     .section-title::before{
         content: '';
         position: absolute;
@@ -189,7 +190,7 @@ img{
         transition: .3s;
     
     }
-}
+} 
 
 .nav__item{
     margin: 0 2rem 0 0;
