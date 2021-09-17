@@ -59,4 +59,34 @@ window.addEventListener('scroll', () => {
 
 
 
+ 
 
+
+
+
+const topBtn = document.querySelector('.top__btn');
+console.log(topBtn);
+
+window.addEventListener("scroll", (e) => {
+  const scrollTop = window.scrollY;
+  if (scrollTop > 500) {
+    topBtn.classList.add('btn__active');
+  } else {
+    topBtn.classList.remove('btn__active');
+  }
+})
+
+topBtn.addEventListener('click', () => {
+    if (topBtn) {
+        scrollTo(0, 0);
+    }
+})
+
+
+
+const subsBtn = document.querySelector('.subscribe__btn');
+
+subsBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    subsBtn.innerHTML = 'Done'
+})

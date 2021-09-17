@@ -58,7 +58,49 @@
 html{
     scroll-behavior: smooth;
 }
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--dark-color-lighten);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--dark-color);
+    border-radius: .3rem;
+    height:200px;
+}
+.top__btn{
+    position: fixed;
+    bottom: -50px;
+    right: 20px;
+    width: 38px;
+    height: 38px;
+    background-color: var(--dark-color);
+    z-index: var(--z-fixed);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 3);
+}
+.top__btn-icon{
+    font-size: 1.3rem;
+    color: var(--white-color);
+    animation: slideUp 1s infinite forwards;
+}
+@keyframes slideUp {
+    0%{
+        transform: translateY(-10);
+    }
+    50%{
+        transform: translateY(3px);
+    }
+}
 
+.btn__active{
+    bottom: 50px;
+    
+}
 body{
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
@@ -225,7 +267,7 @@ img{
 
 .show{
     left: 0;
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 2);
+    transition: .5s cubic-bezier(0.075, 0.82, 0.165, 2);
 }
 
 /* ========== Active link ================ */
@@ -305,6 +347,7 @@ img{
     background-color: red;
     padding: .2rem .4rem;
     color: var(--white-color);
+    
 }
 
 .home__title{
@@ -319,14 +362,33 @@ img{
 /* =============== BUTTONS ================== */
 .button{
     display: inline-block;
+    /* background-color: var(--dark-color);
+    color: var(--white-color); */
+    padding: 1rem 1.5rem;
+    border-radius: .5rem;
+    transition: .3s;
+    letter-spacing: 1px;
+    border: 2px solid var(--dark-color);
+    font-weight: var(--font-semi-bold);
+}
+.button:hover{
+    transform: translateY(-.25rem);
+    /* background-color: black; */
+    /* letter-spacing: 0px; */
+}
+
+.add__cart{
+    display: inline-block;
     background-color: var(--dark-color);
     color: var(--white-color);
-    padding: 1.125rem 2rem;
+    padding: 1rem 1.5rem;
     border-radius: .5rem;
     transition: .3s;
 }
-.home__button:hover{
+.add__cart:hover{
     transform: translateY(-.25rem);
+    background-color: black;
+    letter-spacing: 0px;
 }
 
 .button__light{
@@ -365,6 +427,7 @@ img{
 .sneaker__sale{
     position: absolute;
     left: 0.5rem;
+    top: -0.1rem;
     background-color: var(--dark-color);
     color: var(--white-color);
     padding: .25rem .7rem;
@@ -398,6 +461,7 @@ img{
 
 .sneaker:hover{
     transform: translateY(-.5rem);
+    box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.2);
 }
 
 .sneaker_pages {
@@ -521,6 +585,7 @@ img{
 .new__price{
     display: block;
     margin-bottom: var(--mb-3);
+    font-weight: var(--font-semi-bold);
 }
 
 .new__sneaker{
