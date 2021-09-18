@@ -1,3 +1,4 @@
+// ======================= MENU BUTTON TOGGLE SCRIPT ==================================
 const showMenu = (toggleId, navId) => {
     const toggle = document.getElementById(toggleId);
     const nav = document.getElementById(navId);
@@ -63,6 +64,7 @@ window.addEventListener('scroll', () => {
 
 
 
+// ================== CLICK TO SCROLL TOP SCRIPT ===============================
 
 const topBtn = document.querySelector('.top__btn');
 console.log(topBtn);
@@ -88,5 +90,18 @@ const subsBtn = document.querySelector('.subscribe__btn');
 
 subsBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    subsBtn.innerHTML = 'Done'
+    setTimeout(() => {
+        subsBtn.innerHTML = 'Done'+"\u00BB"
+    },1000)
+})
+
+
+// ==================== CUSTOM PROGRESS BAR SCRIPT ========================
+const progressBar = document.querySelector(".progressbar__line");
+console.log(progressBar);
+window.addEventListener('scroll', () => {
+    let totalHeight = document.body.scrollHeight - window.innerHeight;
+    let progress = (window.pageYOffset / totalHeight) * 100;
+    progressBar.style.height = progress + '%'
+    console.log(progress);
 })

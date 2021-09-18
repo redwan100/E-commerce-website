@@ -69,6 +69,30 @@ html{
     border-radius: .3rem;
     height:200px;
 }
+.progressbar{
+    position: fixed;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 200px;
+    border-radius: 20px;
+    border: 2px solid orange;
+    z-index: var(--z-fixed);
+    overflow: hidden;
+}
+
+
+.progressbar__line{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: orange;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
 .top__btn{
     position: fixed;
     bottom: -50px;
@@ -361,6 +385,7 @@ img{
 
 /* =============== BUTTONS ================== */
 .button{
+    position: relative;
     display: inline-block;
     /* background-color: var(--dark-color);
     color: var(--white-color); */
@@ -370,11 +395,10 @@ img{
     letter-spacing: 1px;
     border: 2px solid var(--dark-color);
     font-weight: var(--font-semi-bold);
+    z-index: 2;
 }
 .button:hover{
     transform: translateY(-.25rem);
-    /* background-color: black; */
-    /* letter-spacing: 0px; */
 }
 
 .add__cart{
@@ -422,6 +446,7 @@ img{
     background-color: var(--dark-color-lighten);
     border-radius: .5rem;
     transition: .3s;
+    z-index: 2;
 }
 
 .sneaker__sale{
@@ -460,7 +485,8 @@ img{
 }
 
 .sneaker:hover{
-    transform: translateY(-.5rem);
+    /* transform: translateY(-.5rem); */
+    transform: translate(-10px,-10px);
     box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -478,7 +504,35 @@ img{
     color: var(--white-color);
 }
 
+.sneaker::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--dark-color-lighten);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    transition: .3s;
+}
+.sneaker::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg,rgba(230, 18, 18, 0.671),rgb(207, 18, 176));
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -3;
+    transition: .3s;
+    border-radius: .25rem;
+}
+.sneaker:hover::after{
+    transform: translate(10px ,10px);
+    box-shadow: 0 0 30px 0px rgba(241, 3, 3, 0.2);
+    /* filter: blur(1px); */
 
+}
 /* =================== COLLECTION =============== */
 
 .collection__container{
